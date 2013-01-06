@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A041699083E0089B2C1 /* UIKit.framework */; };
+		03408A071699083E0089B2C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
+		03408A091699083E0089B2C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A081699083E0089B2C1 /* CoreGraphics.framework */; };
+		03408A0F1699083E0089B2C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03408A0D1699083E0089B2C1 /* InfoPlist.strings */; };
+		03408A111699083E0089B2C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A101699083E0089B2C1 /* main.m */; };
+		03408A151699083E0089B2C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A141699083E0089B2C1 /* AppDelegate.m */; };
+		03408A171699083E0089B2C1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A161699083E0089B2C1 /* Default.png */; };
+		03408A191699083E0089B2C1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A181699083E0089B2C1 /* Default@2x.png */; };
+		03408A1B1699083E0089B2C1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A1A1699083E0089B2C1 /* Default-568h@2x.png */; };
+		03408A1E1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03408A1C1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard */; };
+		03408A211699083E0089B2C1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03408A1F1699083E0089B2C1 /* MainStoryboard_iPad.storyboard */; };
+		03408A241699083E0089B2C1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A231699083E0089B2C1 /* FirstViewController.m */; };
+		03408A261699083E0089B2C1 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A251699083E0089B2C1 /* first.png */; };
+		03408A281699083E0089B2C1 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A271699083E0089B2C1 /* first@2x.png */; };
+		03408A2B1699083E0089B2C1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A2A1699083E0089B2C1 /* SecondViewController.m */; };
+		03408A2D1699083E0089B2C1 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A2C1699083E0089B2C1 /* second.png */; };
+		03408A2F1699083E0089B2C1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A2E1699083E0089B2C1 /* second@2x.png */; };
+		03408A371699083E0089B2C1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A361699083E0089B2C1 /* SenTestingKit.framework */; };
+		03408A381699083E0089B2C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A041699083E0089B2C1 /* UIKit.framework */; };
+		03408A391699083E0089B2C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
+		03408A411699083E0089B2C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03408A3F1699083E0089B2C1 /* InfoPlist.strings */; };
+		03408A441699083E0089B2C1 /* StudentConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A431699083E0089B2C1 /* StudentConnectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03408A3A1699083E0089B2C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 034089F71699083E0089B2C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 034089FF1699083E0089B2C1;
+			remoteInfo = StudentConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03408A001699083E0089B2C1 /* StudentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03408A041699083E0089B2C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		03408A061699083E0089B2C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03408A081699083E0089B2C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		03408A0C1699083E0089B2C1 /* StudentConnect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudentConnect-Info.plist"; sourceTree = "<group>"; };
+		03408A0E1699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03408A101699083E0089B2C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03408A121699083E0089B2C1 /* StudentConnect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudentConnect-Prefix.pch"; sourceTree = "<group>"; };
+		03408A131699083E0089B2C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03408A141699083E0089B2C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03408A161699083E0089B2C1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		03408A181699083E0089B2C1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		03408A1A1699083E0089B2C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		03408A1D1699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		03408A201699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		03408A221699083E0089B2C1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		03408A231699083E0089B2C1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		03408A251699083E0089B2C1 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		03408A271699083E0089B2C1 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		03408A291699083E0089B2C1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		03408A2A1699083E0089B2C1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		03408A2C1699083E0089B2C1 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		03408A2E1699083E0089B2C1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		03408A351699083E0089B2C1 /* StudentConnectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentConnectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03408A361699083E0089B2C1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		03408A3E1699083E0089B2C1 /* StudentConnectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudentConnectTests-Info.plist"; sourceTree = "<group>"; };
+		03408A401699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03408A421699083E0089B2C1 /* StudentConnectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentConnectTests.h; sourceTree = "<group>"; };
+		03408A431699083E0089B2C1 /* StudentConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentConnectTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		034089FD1699083E0089B2C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */,
+				03408A071699083E0089B2C1 /* Foundation.framework in Frameworks */,
+				03408A091699083E0089B2C1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03408A311699083E0089B2C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03408A371699083E0089B2C1 /* SenTestingKit.framework in Frameworks */,
+				03408A381699083E0089B2C1 /* UIKit.framework in Frameworks */,
+				03408A391699083E0089B2C1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034089F51699083E0089B2C1 = {
+			isa = PBXGroup;
+			children = (
+				03408A0A1699083E0089B2C1 /* StudentConnect */,
+				03408A3C1699083E0089B2C1 /* StudentConnectTests */,
+				03408A031699083E0089B2C1 /* Frameworks */,
+				03408A011699083E0089B2C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03408A011699083E0089B2C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03408A001699083E0089B2C1 /* StudentConnect.app */,
+				03408A351699083E0089B2C1 /* StudentConnectTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03408A031699083E0089B2C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03408A041699083E0089B2C1 /* UIKit.framework */,
+				03408A061699083E0089B2C1 /* Foundation.framework */,
+				03408A081699083E0089B2C1 /* CoreGraphics.framework */,
+				03408A361699083E0089B2C1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03408A0A1699083E0089B2C1 /* StudentConnect */ = {
+			isa = PBXGroup;
+			children = (
+				03408A131699083E0089B2C1 /* AppDelegate.h */,
+				03408A141699083E0089B2C1 /* AppDelegate.m */,
+				03408A1C1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard */,
+				03408A1F1699083E0089B2C1 /* MainStoryboard_iPad.storyboard */,
+				03408A221699083E0089B2C1 /* FirstViewController.h */,
+				03408A231699083E0089B2C1 /* FirstViewController.m */,
+				03408A251699083E0089B2C1 /* first.png */,
+				03408A271699083E0089B2C1 /* first@2x.png */,
+				03408A291699083E0089B2C1 /* SecondViewController.h */,
+				03408A2A1699083E0089B2C1 /* SecondViewController.m */,
+				03408A2C1699083E0089B2C1 /* second.png */,
+				03408A2E1699083E0089B2C1 /* second@2x.png */,
+				03408A0B1699083E0089B2C1 /* Supporting Files */,
+			);
+			path = StudentConnect;
+			sourceTree = "<group>";
+		};
+		03408A0B1699083E0089B2C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03408A0C1699083E0089B2C1 /* StudentConnect-Info.plist */,
+				03408A0D1699083E0089B2C1 /* InfoPlist.strings */,
+				03408A101699083E0089B2C1 /* main.m */,
+				03408A121699083E0089B2C1 /* StudentConnect-Prefix.pch */,
+				03408A161699083E0089B2C1 /* Default.png */,
+				03408A181699083E0089B2C1 /* Default@2x.png */,
+				03408A1A1699083E0089B2C1 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03408A3C1699083E0089B2C1 /* StudentConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				03408A421699083E0089B2C1 /* StudentConnectTests.h */,
+				03408A431699083E0089B2C1 /* StudentConnectTests.m */,
+				03408A3D1699083E0089B2C1 /* Supporting Files */,
+			);
+			path = StudentConnectTests;
+			sourceTree = "<group>";
+		};
+		03408A3D1699083E0089B2C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03408A3E1699083E0089B2C1 /* StudentConnectTests-Info.plist */,
+				03408A3F1699083E0089B2C1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		034089FF1699083E0089B2C1 /* StudentConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03408A471699083E0089B2C1 /* Build configuration list for PBXNativeTarget "StudentConnect" */;
+			buildPhases = (
+				034089FC1699083E0089B2C1 /* Sources */,
+				034089FD1699083E0089B2C1 /* Frameworks */,
+				034089FE1699083E0089B2C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudentConnect;
+			productName = StudentConnect;
+			productReference = 03408A001699083E0089B2C1 /* StudentConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03408A341699083E0089B2C1 /* StudentConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03408A4A1699083E0089B2C1 /* Build configuration list for PBXNativeTarget "StudentConnectTests" */;
+			buildPhases = (
+				03408A301699083E0089B2C1 /* Sources */,
+				03408A311699083E0089B2C1 /* Frameworks */,
+				03408A321699083E0089B2C1 /* Resources */,
+				03408A331699083E0089B2C1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03408A3B1699083E0089B2C1 /* PBXTargetDependency */,
+			);
+			name = StudentConnectTests;
+			productName = StudentConnectTests;
+			productReference = 03408A351699083E0089B2C1 /* StudentConnectTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		034089F71699083E0089B2C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Kishore Joshi";
+			};
+			buildConfigurationList = 034089FA1699083E0089B2C1 /* Build configuration list for PBXProject "StudentConnect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 034089F51699083E0089B2C1;
+			productRefGroup = 03408A011699083E0089B2C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				034089FF1699083E0089B2C1 /* StudentConnect */,
+				03408A341699083E0089B2C1 /* StudentConnectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		034089FE1699083E0089B2C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03408A0F1699083E0089B2C1 /* InfoPlist.strings in Resources */,
+				03408A171699083E0089B2C1 /* Default.png in Resources */,
+				03408A191699083E0089B2C1 /* Default@2x.png in Resources */,
+				03408A1B1699083E0089B2C1 /* Default-568h@2x.png in Resources */,
+				03408A1E1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard in Resources */,
+				03408A211699083E0089B2C1 /* MainStoryboard_iPad.storyboard in Resources */,
+				03408A261699083E0089B2C1 /* first.png in Resources */,
+				03408A281699083E0089B2C1 /* first@2x.png in Resources */,
+				03408A2D1699083E0089B2C1 /* second.png in Resources */,
+				03408A2F1699083E0089B2C1 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03408A321699083E0089B2C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03408A411699083E0089B2C1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03408A331699083E0089B2C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		034089FC1699083E0089B2C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03408A111699083E0089B2C1 /* main.m in Sources */,
+				03408A151699083E0089B2C1 /* AppDelegate.m in Sources */,
+				03408A241699083E0089B2C1 /* FirstViewController.m in Sources */,
+				03408A2B1699083E0089B2C1 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03408A301699083E0089B2C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03408A441699083E0089B2C1 /* StudentConnectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03408A3B1699083E0089B2C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 034089FF1699083E0089B2C1 /* StudentConnect */;
+			targetProxy = 03408A3A1699083E0089B2C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03408A0D1699083E0089B2C1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03408A0E1699083E0089B2C1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		03408A1C1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03408A1D1699083E0089B2C1 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		03408A1F1699083E0089B2C1 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03408A201699083E0089B2C1 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		03408A3F1699083E0089B2C1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03408A401699083E0089B2C1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03408A451699083E0089B2C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03408A461699083E0089B2C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03408A481699083E0089B2C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
+				INFOPLIST_FILE = "StudentConnect/StudentConnect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		03408A491699083E0089B2C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
+				INFOPLIST_FILE = "StudentConnect/StudentConnect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		03408A4B1699083E0089B2C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudentConnect.app/StudentConnect";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
+				INFOPLIST_FILE = "StudentConnectTests/StudentConnectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		03408A4C1699083E0089B2C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudentConnect.app/StudentConnect";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
+				INFOPLIST_FILE = "StudentConnectTests/StudentConnectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		034089FA1699083E0089B2C1 /* Build configuration list for PBXProject "StudentConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03408A451699083E0089B2C1 /* Debug */,
+				03408A461699083E0089B2C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03408A471699083E0089B2C1 /* Build configuration list for PBXNativeTarget "StudentConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03408A481699083E0089B2C1 /* Debug */,
+				03408A491699083E0089B2C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03408A4A1699083E0089B2C1 /* Build configuration list for PBXNativeTarget "StudentConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03408A4B1699083E0089B2C1 /* Debug */,
+				03408A4C1699083E0089B2C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 034089F71699083E0089B2C1 /* Project object */;
+}
