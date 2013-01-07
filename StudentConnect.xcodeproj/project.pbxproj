@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03254FBF169A4B9F000336A1 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FBE169A4B9F000336A1 /* ContactUsViewController.m */; };
+		03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FC9169A5743000336A1 /* BSKeyboardControls.m */; };
+		03254FCE169A5743000336A1 /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCA169A5743000336A1 /* BSKeyboardControls.strings */; };
+		03254FD0169A78B7000336A1 /* SDLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCF169A78B7000336A1 /* SDLogo.png */; };
 		03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A041699083E0089B2C1 /* UIKit.framework */; };
 		03408A071699083E0089B2C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
 		03408A091699083E0089B2C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A081699083E0089B2C1 /* CoreGraphics.framework */; };
@@ -42,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03254FBD169A4B9F000336A1 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		03254FBE169A4B9F000336A1 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		03254FC8169A5743000336A1 /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSKeyboardControls.h; sourceTree = "<group>"; };
+		03254FC9169A5743000336A1 /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSKeyboardControls.m; sourceTree = "<group>"; };
+		03254FCB169A5743000336A1 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		03254FCC169A5743000336A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		03254FCF169A78B7000336A1 /* SDLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SDLogo.png; path = ../../../../Downloads/SDLogo.png; sourceTree = "<group>"; };
 		03408A001699083E0089B2C1 /* StudentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03408A041699083E0089B2C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03408A061699083E0089B2C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03254FB71699E9D7000336A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		03254FC7169A5743000336A1 /* BSKeyboardControls */ = {
+			isa = PBXGroup;
+			children = (
+				03254FC8169A5743000336A1 /* BSKeyboardControls.h */,
+				03254FC9169A5743000336A1 /* BSKeyboardControls.m */,
+				03254FCA169A5743000336A1 /* BSKeyboardControls.strings */,
+			);
+			name = BSKeyboardControls;
+			path = "../../../../Downloads/BSKeyboardControls-master/BSKeyboardControls";
+			sourceTree = "<group>";
+		};
 		034089F51699083E0089B2C1 = {
 			isa = PBXGroup;
 			children = (
@@ -130,11 +159,15 @@
 		03408A0A1699083E0089B2C1 /* StudentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				03254FC7169A5743000336A1 /* BSKeyboardControls */,
+				03254FB71699E9D7000336A1 /* Resources */,
 				03408A131699083E0089B2C1 /* AppDelegate.h */,
 				03408A141699083E0089B2C1 /* AppDelegate.m */,
 				03408A1C1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard */,
 				03408A1F1699083E0089B2C1 /* MainStoryboard_iPad.storyboard */,
 				03408A221699083E0089B2C1 /* FirstViewController.h */,
+				03254FBD169A4B9F000336A1 /* ContactUsViewController.h */,
+				03254FBE169A4B9F000336A1 /* ContactUsViewController.m */,
 				03408A231699083E0089B2C1 /* FirstViewController.m */,
 				03408A251699083E0089B2C1 /* first.png */,
 				03408A271699083E0089B2C1 /* first@2x.png */,
@@ -151,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				03408A0C1699083E0089B2C1 /* StudentConnect-Info.plist */,
+				03254FCF169A78B7000336A1 /* SDLogo.png */,
 				03408A0D1699083E0089B2C1 /* InfoPlist.strings */,
 				03408A101699083E0089B2C1 /* main.m */,
 				03408A121699083E0089B2C1 /* StudentConnect-Prefix.pch */,
@@ -234,6 +268,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				da,
 			);
 			mainGroup = 034089F51699083E0089B2C1;
 			productRefGroup = 03408A011699083E0089B2C1 /* Products */;
@@ -261,6 +296,8 @@
 				03408A281699083E0089B2C1 /* first@2x.png in Resources */,
 				03408A2D1699083E0089B2C1 /* second.png in Resources */,
 				03408A2F1699083E0089B2C1 /* second@2x.png in Resources */,
+				03254FCE169A5743000336A1 /* BSKeyboardControls.strings in Resources */,
+				03254FD0169A78B7000336A1 /* SDLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +336,8 @@
 				03408A151699083E0089B2C1 /* AppDelegate.m in Sources */,
 				03408A241699083E0089B2C1 /* FirstViewController.m in Sources */,
 				03408A2B1699083E0089B2C1 /* SecondViewController.m in Sources */,
+				03254FBF169A4B9F000336A1 /* ContactUsViewController.m in Sources */,
+				03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +360,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		03254FCA169A5743000336A1 /* BSKeyboardControls.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03254FCB169A5743000336A1 /* da */,
+				03254FCC169A5743000336A1 /* en */,
+			);
+			name = BSKeyboardControls.strings;
+			sourceTree = "<group>";
+		};
 		03408A0D1699083E0089B2C1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -483,6 +531,7 @@
 				03408A491699083E0089B2C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03408A4A1699083E0089B2C1 /* Build configuration list for PBXNativeTarget "StudentConnectTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +540,7 @@
 				03408A4C1699083E0089B2C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
