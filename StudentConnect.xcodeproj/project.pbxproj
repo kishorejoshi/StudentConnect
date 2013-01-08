@@ -33,6 +33,12 @@
 		03408A391699083E0089B2C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
 		03408A411699083E0089B2C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03408A3F1699083E0089B2C1 /* InfoPlist.strings */; };
 		03408A441699083E0089B2C1 /* StudentConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A431699083E0089B2C1 /* StudentConnectTests.m */; };
+		0389F832169BD55200734A31 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F828169BD38D00734A31 /* libRestKit.a */; };
+		0389F836169BD58B00734A31 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F834169BD58B00734A31 /* CFNetwork.framework */; };
+		0389F837169BD58B00734A31 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F835169BD58B00734A31 /* CoreData.framework */; };
+		0389F839169BD59700734A31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F838169BD59700734A31 /* MobileCoreServices.framework */; };
+		0389F83B169BD5A300734A31 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83A169BD5A300734A31 /* Security.framework */; };
+		0389F83D169BD5AE00734A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 034089FF1699083E0089B2C1;
 			remoteInfo = StudentConnect;
+		};
+		0389F827169BD38D00734A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		0389F829169BD38D00734A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		0389F82B169BD38D00734A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		0389F82D169BD38D00734A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		0389F840169BD95100734A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,6 +123,12 @@
 		03408A401699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03408A421699083E0089B2C1 /* StudentConnectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentConnectTests.h; sourceTree = "<group>"; };
 		03408A431699083E0089B2C1 /* StudentConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentConnectTests.m; sourceTree = "<group>"; };
+		0389F81D169BD38C00734A31 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = StudentConnect/Libraries/RestKit.xcodeproj; sourceTree = "<group>"; };
+		0389F834169BD58B00734A31 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0389F835169BD58B00734A31 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0389F838169BD59700734A31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0389F83A169BD5A300734A31 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +136,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0389F83D169BD5AE00734A31 /* SystemConfiguration.framework in Frameworks */,
+				0389F83B169BD5A300734A31 /* Security.framework in Frameworks */,
+				0389F839169BD59700734A31 /* MobileCoreServices.framework in Frameworks */,
+				0389F836169BD58B00734A31 /* CFNetwork.framework in Frameworks */,
+				0389F837169BD58B00734A31 /* CoreData.framework in Frameworks */,
+				0389F832169BD55200734A31 /* libRestKit.a in Frameworks */,
 				03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */,
 				03408A071699083E0089B2C1 /* Foundation.framework in Frameworks */,
 				03408A091699083E0089B2C1 /* CoreGraphics.framework in Frameworks */,
@@ -129,6 +182,12 @@
 		034089F51699083E0089B2C1 = {
 			isa = PBXGroup;
 			children = (
+				0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */,
+				0389F83A169BD5A300734A31 /* Security.framework */,
+				0389F838169BD59700734A31 /* MobileCoreServices.framework */,
+				0389F834169BD58B00734A31 /* CFNetwork.framework */,
+				0389F835169BD58B00734A31 /* CoreData.framework */,
+				0389F81D169BD38C00734A31 /* RestKit.xcodeproj */,
 				03408A0A1699083E0089B2C1 /* StudentConnect */,
 				03408A3C1699083E0089B2C1 /* StudentConnectTests */,
 				03408A031699083E0089B2C1 /* Frameworks */,
@@ -214,6 +273,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0389F81E169BD38C00734A31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0389F828169BD38D00734A31 /* libRestKit.a */,
+				0389F82A169BD38D00734A31 /* RestKitTests.octest */,
+				0389F82C169BD38D00734A31 /* RestKit.framework */,
+				0389F82E169BD38D00734A31 /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +298,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0389F841169BD95100734A31 /* PBXTargetDependency */,
 			);
 			name = StudentConnect;
 			productName = StudentConnect;
@@ -273,6 +344,12 @@
 			mainGroup = 034089F51699083E0089B2C1;
 			productRefGroup = 03408A011699083E0089B2C1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0389F81E169BD38C00734A31 /* Products */;
+					ProjectRef = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				034089FF1699083E0089B2C1 /* StudentConnect */,
@@ -280,6 +357,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0389F828169BD38D00734A31 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 0389F827169BD38D00734A31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0389F82A169BD38D00734A31 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 0389F829169BD38D00734A31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0389F82C169BD38D00734A31 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 0389F82B169BD38D00734A31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0389F82E169BD38D00734A31 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 0389F82D169BD38D00734A31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		034089FE1699083E0089B2C1 /* Resources */ = {
@@ -356,6 +464,11 @@
 			isa = PBXTargetDependency;
 			target = 034089FF1699083E0089B2C1 /* StudentConnect */;
 			targetProxy = 03408A3A1699083E0089B2C1 /* PBXContainerItemProxy */;
+		};
+		0389F841169BD95100734A31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 0389F840169BD95100734A31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -461,7 +574,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "StudentConnect/StudentConnect-Info.plist";
+				OTHER_LDFLAGS = "-ObjC-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -472,7 +587,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "StudentConnect/StudentConnect-Info.plist";
+				OTHER_LDFLAGS = "-ObjC-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
