@@ -22,10 +22,8 @@
 		03408A1B1699083E0089B2C1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A1A1699083E0089B2C1 /* Default-568h@2x.png */; };
 		03408A1E1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03408A1C1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard */; };
 		03408A211699083E0089B2C1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03408A1F1699083E0089B2C1 /* MainStoryboard_iPad.storyboard */; };
-		03408A241699083E0089B2C1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A231699083E0089B2C1 /* FirstViewController.m */; };
 		03408A261699083E0089B2C1 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A251699083E0089B2C1 /* first.png */; };
 		03408A281699083E0089B2C1 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A271699083E0089B2C1 /* first@2x.png */; };
-		03408A2B1699083E0089B2C1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A2A1699083E0089B2C1 /* SecondViewController.m */; };
 		03408A2D1699083E0089B2C1 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A2C1699083E0089B2C1 /* second.png */; };
 		03408A2F1699083E0089B2C1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03408A2E1699083E0089B2C1 /* second@2x.png */; };
 		03408A371699083E0089B2C1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A361699083E0089B2C1 /* SenTestingKit.framework */; };
@@ -109,12 +107,8 @@
 		03408A1A1699083E0089B2C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		03408A1D1699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		03408A201699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		03408A221699083E0089B2C1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		03408A231699083E0089B2C1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		03408A251699083E0089B2C1 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		03408A271699083E0089B2C1 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		03408A291699083E0089B2C1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		03408A2A1699083E0089B2C1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		03408A2C1699083E0089B2C1 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		03408A2E1699083E0089B2C1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		03408A351699083E0089B2C1 /* StudentConnectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentConnectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +176,8 @@
 		033EC76516A3291D00263C5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				03254FBD169A4B9F000336A1 /* ContactUsViewController.h */,
+				03254FBE169A4B9F000336A1 /* ContactUsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -232,14 +228,8 @@
 				03408A141699083E0089B2C1 /* AppDelegate.m */,
 				03408A1C1699083E0089B2C1 /* MainStoryboard_iPhone.storyboard */,
 				03408A1F1699083E0089B2C1 /* MainStoryboard_iPad.storyboard */,
-				03408A221699083E0089B2C1 /* FirstViewController.h */,
-				03254FBD169A4B9F000336A1 /* ContactUsViewController.h */,
-				03254FBE169A4B9F000336A1 /* ContactUsViewController.m */,
-				03408A231699083E0089B2C1 /* FirstViewController.m */,
 				03408A251699083E0089B2C1 /* first.png */,
 				03408A271699083E0089B2C1 /* first@2x.png */,
-				03408A291699083E0089B2C1 /* SecondViewController.h */,
-				03408A2A1699083E0089B2C1 /* SecondViewController.m */,
 				03408A2C1699083E0089B2C1 /* second.png */,
 				03408A2E1699083E0089B2C1 /* second@2x.png */,
 				03408A0B1699083E0089B2C1 /* Supporting Files */,
@@ -450,8 +440,6 @@
 			files = (
 				03408A111699083E0089B2C1 /* main.m in Sources */,
 				03408A151699083E0089B2C1 /* AppDelegate.m in Sources */,
-				03408A241699083E0089B2C1 /* FirstViewController.m in Sources */,
-				03408A2B1699083E0089B2C1 /* SecondViewController.m in Sources */,
 				03254FBF169A4B9F000336A1 /* ContactUsViewController.m in Sources */,
 				03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */,
 			);

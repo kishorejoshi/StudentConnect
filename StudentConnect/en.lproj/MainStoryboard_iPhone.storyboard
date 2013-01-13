@@ -322,6 +322,9 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="buttonSave:" destination="iRy-Fd-QTj" eventType="touchUpInside" id="wdk-JL-dI9"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -780,6 +783,7 @@
         <class className="ContactUsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactUsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="buttonSave:"/>
                 <relationship kind="outlet" name="textAboutMe" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="textEmail" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textMajor" candidateClass="UITextField"/>

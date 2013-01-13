@@ -215,6 +215,31 @@
      */
 //}
 
+//textView about me delegate to clear the default text
+//textview on focus delegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textAboutMe
+{
+    //on focus
+    if([textAboutMe.text isEqualToString:@"Tell Us about Yourself!!!"])
+    {
+        textAboutMe.text = @"";
+    }
+    return YES;
+}
+
+//textview on lost focus delegate
+- (BOOL)textView:(UITextView *)textAboutMe shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"])
+    {
+        //Lost Focus
+        textAboutMe.text =@"Tell Us about Yourself!!!";
+        [textAboutMe resignFirstResponder];
+    }
+    return YES;
+}
+
+
 - (void)viewDidUnload
 {
     [self setTextName:nil];
@@ -227,4 +252,12 @@
 }
 
 
+- (IBAction)buttonSave:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save!!"
+                                                    message:@"Save button Clicked."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 @end

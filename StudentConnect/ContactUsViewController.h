@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *textPhone;
 @property (weak, nonatomic) IBOutlet UITextField *textMajor;
 @property (weak, nonatomic) IBOutlet UITextView *textAboutMe;
+- (IBAction)buttonSave:(id)sender;
 
 @end
