@@ -11,6 +11,8 @@
 		03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FC9169A5743000336A1 /* BSKeyboardControls.m */; };
 		03254FCE169A5743000336A1 /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCA169A5743000336A1 /* BSKeyboardControls.strings */; };
 		03254FD0169A78B7000336A1 /* SDLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCF169A78B7000336A1 /* SDLogo.png */; };
+		033EC76B16A3715500263C5F /* AboutSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033EC76A16A3715500263C5F /* AboutSDViewController.m */; };
+		033EC77216A3783300263C5F /* AboutContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 033EC77116A3783300263C5F /* AboutContent.m */; };
 		03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A041699083E0089B2C1 /* UIKit.framework */; };
 		03408A071699083E0089B2C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
 		03408A091699083E0089B2C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A081699083E0089B2C1 /* CoreGraphics.framework */; };
@@ -92,6 +94,10 @@
 		03254FCB169A5743000336A1 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 		03254FCC169A5743000336A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 		03254FCF169A78B7000336A1 /* SDLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SDLogo.png; path = ../../../../Downloads/SDLogo.png; sourceTree = "<group>"; };
+		033EC76916A3715500263C5F /* AboutSDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutSDViewController.h; sourceTree = "<group>"; };
+		033EC76A16A3715500263C5F /* AboutSDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSDViewController.m; sourceTree = "<group>"; };
+		033EC77016A3783300263C5F /* AboutContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutContent.h; sourceTree = "<group>"; };
+		033EC77116A3783300263C5F /* AboutContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutContent.m; sourceTree = "<group>"; };
 		03408A001699083E0089B2C1 /* StudentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03408A041699083E0089B2C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03408A061699083E0089B2C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -178,8 +184,19 @@
 			children = (
 				03254FBD169A4B9F000336A1 /* ContactUsViewController.h */,
 				03254FBE169A4B9F000336A1 /* ContactUsViewController.m */,
+				033EC76916A3715500263C5F /* AboutSDViewController.h */,
+				033EC76A16A3715500263C5F /* AboutSDViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		033EC76C16A3775100263C5F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				033EC77016A3783300263C5F /* AboutContent.h */,
+				033EC77116A3783300263C5F /* AboutContent.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		034089F51699083E0089B2C1 = {
@@ -221,6 +238,7 @@
 		03408A0A1699083E0089B2C1 /* StudentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				033EC76C16A3775100263C5F /* Data */,
 				033EC76516A3291D00263C5F /* Controller */,
 				03254FC7169A5743000336A1 /* BSKeyboardControls */,
 				03254FB71699E9D7000336A1 /* Resources */,
@@ -442,6 +460,8 @@
 				03408A151699083E0089B2C1 /* AppDelegate.m in Sources */,
 				03254FBF169A4B9F000336A1 /* ContactUsViewController.m in Sources */,
 				03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */,
+				033EC76B16A3715500263C5F /* AboutSDViewController.m in Sources */,
+				033EC77216A3783300263C5F /* AboutContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -662,11 +662,11 @@
             </objects>
             <point key="canvasLocation" x="-1060" y="-1042"/>
         </scene>
-        <!--Table View Controller - About Us-->
+        <!--AboutSD View Controller - About Us-->
         <scene sceneID="qY4-tI-hyE">
             <objects>
-                <tableViewController id="GXy-Ni-mQw" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hpv-F5-Y7D">
+                <tableViewController id="GXy-Ni-mQw" customClass="AboutSDViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hpv-F5-Y7D">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.6773149162696126" green="0.6545510253764496" blue="0.68783967391304346" alpha="1" colorSpace="calibratedRGB"/>
@@ -722,6 +722,9 @@
                                                     <string key="text">Something Digital (SD) is a dynamic, New York City-based Technology Services boutique offering three distinct practice groups—Interactive Design, Software, and IT Services—to meet diverse technology needs.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="GXy-Ni-mQw" id="9Wi-XJ-d1C"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -749,6 +752,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="About Us" id="uVc-vM-TgJ"/>
+                    <connections>
+                        <outlet property="textAboutSD" destination="bh1-Dl-B7y" id="MCx-uS-Hq7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfT-6J-bvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -779,22 +785,6 @@
     <resources>
         <image name="SDLogo.png" width="48" height="48"/>
     </resources>
-    <classes>
-        <class className="ContactUsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactUsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonSave:"/>
-                <relationship kind="outlet" name="textAboutMe" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="textEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textMajor" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textPhone" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
