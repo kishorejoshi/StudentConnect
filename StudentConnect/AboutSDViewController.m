@@ -7,6 +7,7 @@
 //
 
 #import "AboutSDViewController.h"
+#import <RestKit/RestKit.h>
 #import "AboutContent.h"
 
 @interface AboutSDViewController ()

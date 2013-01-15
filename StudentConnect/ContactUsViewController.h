@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BSKeyboardControls.h"
+#import <RestKit/RestKit.h>
+#import <CoreData/CoreData.h>
 
 @interface ContactUsViewController : UITableViewController<UITextFieldDelegate,UITableViewDelegate,BSKeyboardControlsDelegate>
 

@@ -10,12 +10,12 @@
 		03254FBF169A4B9F000336A1 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FBE169A4B9F000336A1 /* ContactUsViewController.m */; };
 		03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FC9169A5743000336A1 /* BSKeyboardControls.m */; };
 		03254FCE169A5743000336A1 /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCA169A5743000336A1 /* BSKeyboardControls.strings */; };
+		03254FD0169A78B7000336A1 /* SDLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCF169A78B7000336A1 /* SDLogo.png */; };
 		033EC76B16A3715500263C5F /* AboutSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033EC76A16A3715500263C5F /* AboutSDViewController.m */; };
 		033EC77216A3783300263C5F /* AboutContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 033EC77116A3783300263C5F /* AboutContent.m */; };
-		033EC78016A381CA00263C5F /* SDLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 033EC78216A381CA00263C5F /* SDLogo.png */; };
-		033EC78B16A3BA0600263C5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A041699083E0089B2C1 /* UIKit.framework */; };
-		033EC78C16A3BA1600263C5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
-		033EC78D16A3BA1F00263C5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A081699083E0089B2C1 /* CoreGraphics.framework */; };
+		03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A041699083E0089B2C1 /* UIKit.framework */; };
+		03408A071699083E0089B2C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
+		03408A091699083E0089B2C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A081699083E0089B2C1 /* CoreGraphics.framework */; };
 		03408A0F1699083E0089B2C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03408A0D1699083E0089B2C1 /* InfoPlist.strings */; };
 		03408A111699083E0089B2C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A101699083E0089B2C1 /* main.m */; };
 		03408A151699083E0089B2C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A141699083E0089B2C1 /* AppDelegate.m */; };
@@ -33,14 +33,12 @@
 		03408A391699083E0089B2C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A061699083E0089B2C1 /* Foundation.framework */; };
 		03408A411699083E0089B2C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03408A3F1699083E0089B2C1 /* InfoPlist.strings */; };
 		03408A441699083E0089B2C1 /* StudentConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03408A431699083E0089B2C1 /* StudentConnectTests.m */; };
-		0368B1C016A5029E002861AB /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0368B1A916A50145002861AB /* libRestKit.a */; };
-		0368B1C116A502AE002861AB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F834169BD58B00734A31 /* CFNetwork.framework */; };
-		0368B1C216A502B9002861AB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F835169BD58B00734A31 /* CoreData.framework */; };
-		0368B1C316A502C8002861AB /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 033EC78316A3841300263C5F /* libxml2.dylib */; };
-		0368B1C416A502D6002861AB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F838169BD59700734A31 /* MobileCoreServices.framework */; };
-		0368B1C516A502E1002861AB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033EC78516A3842F00263C5F /* QuartzCore.framework */; };
-		0368B1C616A502EB002861AB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83A169BD5A300734A31 /* Security.framework */; };
-		0368B1C716A502F7002861AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */; };
+		0389F832169BD55200734A31 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F828169BD38D00734A31 /* libRestKit.a */; };
+		0389F836169BD58B00734A31 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F834169BD58B00734A31 /* CFNetwork.framework */; };
+		0389F837169BD58B00734A31 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F835169BD58B00734A31 /* CoreData.framework */; };
+		0389F839169BD59700734A31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F838169BD59700734A31 /* MobileCoreServices.framework */; };
+		0389F83B169BD5A300734A31 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83A169BD5A300734A31 /* Security.framework */; };
+		0389F83D169BD5AE00734A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,37 +49,37 @@
 			remoteGlobalIDString = 034089FF1699083E0089B2C1;
 			remoteInfo = StudentConnect;
 		};
-		0368B1A816A50145002861AB /* PBXContainerItemProxy */ = {
+		0389F827169BD38D00734A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0368B19E16A50145002861AB /* RestKit.xcodeproj */;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160D1614564E810060A5C5;
 			remoteInfo = RestKit;
 		};
-		0368B1AA16A50145002861AB /* PBXContainerItemProxy */ = {
+		0389F829169BD38D00734A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0368B19E16A50145002861AB /* RestKit.xcodeproj */;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160D2614564E820060A5C5;
 			remoteInfo = RestKitTests;
 		};
-		0368B1AC16A50145002861AB /* PBXContainerItemProxy */ = {
+		0389F82B169BD38D00734A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0368B19E16A50145002861AB /* RestKit.xcodeproj */;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160E62145651060060A5C5;
 			remoteInfo = RestKitFramework;
 		};
-		0368B1AE16A50145002861AB /* PBXContainerItemProxy */ = {
+		0389F82D169BD38D00734A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0368B19E16A50145002861AB /* RestKit.xcodeproj */;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160E78145651060060A5C5;
 			remoteInfo = RestKitFrameworkTests;
 		};
-		0368B1BE16A5027E002861AB /* PBXContainerItemProxy */ = {
+		0389F840169BD95100734A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0368B19E16A50145002861AB /* RestKit.xcodeproj */;
+			containerPortal = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 25160D1514564E810060A5C5;
 			remoteInfo = RestKit;
@@ -95,13 +93,11 @@
 		03254FC9169A5743000336A1 /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSKeyboardControls.m; sourceTree = "<group>"; };
 		03254FCB169A5743000336A1 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 		03254FCC169A5743000336A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		03254FCF169A78B7000336A1 /* SDLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SDLogo.png; path = ../../../../Downloads/SDLogo.png; sourceTree = "<group>"; };
 		033EC76916A3715500263C5F /* AboutSDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutSDViewController.h; sourceTree = "<group>"; };
 		033EC76A16A3715500263C5F /* AboutSDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSDViewController.m; sourceTree = "<group>"; };
 		033EC77016A3783300263C5F /* AboutContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutContent.h; sourceTree = "<group>"; };
 		033EC77116A3783300263C5F /* AboutContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutContent.m; sourceTree = "<group>"; };
-		033EC78116A381CA00263C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/SDLogo.png; sourceTree = "<group>"; };
-		033EC78316A3841300263C5F /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		033EC78516A3842F00263C5F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		03408A001699083E0089B2C1 /* StudentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03408A041699083E0089B2C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03408A061699083E0089B2C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,7 +123,7 @@
 		03408A401699083E0089B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03408A421699083E0089B2C1 /* StudentConnectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentConnectTests.h; sourceTree = "<group>"; };
 		03408A431699083E0089B2C1 /* StudentConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentConnectTests.m; sourceTree = "<group>"; };
-		0368B19E16A50145002861AB /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "../../../Downloads/RestKit-0.20.0-pre6/RestKit.xcodeproj"; sourceTree = "<group>"; };
+		0389F81D169BD38C00734A31 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = StudentConnect/Libraries/RestKit.xcodeproj; sourceTree = "<group>"; };
 		0389F834169BD58B00734A31 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0389F835169BD58B00734A31 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0389F838169BD59700734A31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -140,17 +136,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0368B1C716A502F7002861AB /* SystemConfiguration.framework in Frameworks */,
-				0368B1C616A502EB002861AB /* Security.framework in Frameworks */,
-				0368B1C516A502E1002861AB /* QuartzCore.framework in Frameworks */,
-				0368B1C416A502D6002861AB /* MobileCoreServices.framework in Frameworks */,
-				0368B1C316A502C8002861AB /* libxml2.dylib in Frameworks */,
-				0368B1C216A502B9002861AB /* CoreData.framework in Frameworks */,
-				0368B1C116A502AE002861AB /* CFNetwork.framework in Frameworks */,
-				0368B1C016A5029E002861AB /* libRestKit.a in Frameworks */,
-				033EC78D16A3BA1F00263C5F /* CoreGraphics.framework in Frameworks */,
-				033EC78C16A3BA1600263C5F /* Foundation.framework in Frameworks */,
-				033EC78B16A3BA0600263C5F /* UIKit.framework in Frameworks */,
+				0389F83D169BD5AE00734A31 /* SystemConfiguration.framework in Frameworks */,
+				0389F83B169BD5A300734A31 /* Security.framework in Frameworks */,
+				0389F839169BD59700734A31 /* MobileCoreServices.framework in Frameworks */,
+				0389F836169BD58B00734A31 /* CFNetwork.framework in Frameworks */,
+				0389F837169BD58B00734A31 /* CoreData.framework in Frameworks */,
+				0389F832169BD55200734A31 /* libRestKit.a in Frameworks */,
+				03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */,
+				03408A071699083E0089B2C1 /* Foundation.framework in Frameworks */,
+				03408A091699083E0089B2C1 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +202,12 @@
 		034089F51699083E0089B2C1 = {
 			isa = PBXGroup;
 			children = (
+				0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */,
+				0389F83A169BD5A300734A31 /* Security.framework */,
+				0389F838169BD59700734A31 /* MobileCoreServices.framework */,
+				0389F834169BD58B00734A31 /* CFNetwork.framework */,
+				0389F835169BD58B00734A31 /* CoreData.framework */,
+				0389F81D169BD38C00734A31 /* RestKit.xcodeproj */,
 				03408A0A1699083E0089B2C1 /* StudentConnect */,
 				03408A3C1699083E0089B2C1 /* StudentConnectTests */,
 				03408A031699083E0089B2C1 /* Frameworks */,
@@ -227,14 +227,6 @@
 		03408A031699083E0089B2C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				033EC78316A3841300263C5F /* libxml2.dylib */,
-				0389F834169BD58B00734A31 /* CFNetwork.framework */,
-				0389F835169BD58B00734A31 /* CoreData.framework */,
-				0389F838169BD59700734A31 /* MobileCoreServices.framework */,
-				0389F83A169BD5A300734A31 /* Security.framework */,
-				0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */,
-				033EC78516A3842F00263C5F /* QuartzCore.framework */,
-				0368B19E16A50145002861AB /* RestKit.xcodeproj */,
 				03408A041699083E0089B2C1 /* UIKit.framework */,
 				03408A061699083E0089B2C1 /* Foundation.framework */,
 				03408A081699083E0089B2C1 /* CoreGraphics.framework */,
@@ -267,7 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				03408A0C1699083E0089B2C1 /* StudentConnect-Info.plist */,
-				033EC78216A381CA00263C5F /* SDLogo.png */,
+				03254FCF169A78B7000336A1 /* SDLogo.png */,
 				03408A0D1699083E0089B2C1 /* InfoPlist.strings */,
 				03408A101699083E0089B2C1 /* main.m */,
 				03408A121699083E0089B2C1 /* StudentConnect-Prefix.pch */,
@@ -297,13 +289,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0368B19F16A50145002861AB /* Products */ = {
+		0389F81E169BD38C00734A31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0368B1A916A50145002861AB /* libRestKit.a */,
-				0368B1AB16A50145002861AB /* RestKitTests.octest */,
-				0368B1AD16A50145002861AB /* RestKit.framework */,
-				0368B1AF16A50145002861AB /* RestKitFrameworkTests.octest */,
+				0389F828169BD38D00734A31 /* libRestKit.a */,
+				0389F82A169BD38D00734A31 /* RestKitTests.octest */,
+				0389F82C169BD38D00734A31 /* RestKit.framework */,
+				0389F82E169BD38D00734A31 /* RestKitFrameworkTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,7 +314,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				0368B1BF16A5027E002861AB /* PBXTargetDependency */,
+				0389F841169BD95100734A31 /* PBXTargetDependency */,
 			);
 			name = StudentConnect;
 			productName = StudentConnect;
@@ -370,8 +362,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0368B19F16A50145002861AB /* Products */;
-					ProjectRef = 0368B19E16A50145002861AB /* RestKit.xcodeproj */;
+					ProductGroup = 0389F81E169BD38C00734A31 /* Products */;
+					ProjectRef = 0389F81D169BD38C00734A31 /* RestKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -383,32 +375,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0368B1A916A50145002861AB /* libRestKit.a */ = {
+		0389F828169BD38D00734A31 /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRestKit.a;
-			remoteRef = 0368B1A816A50145002861AB /* PBXContainerItemProxy */;
+			remoteRef = 0389F827169BD38D00734A31 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0368B1AB16A50145002861AB /* RestKitTests.octest */ = {
+		0389F82A169BD38D00734A31 /* RestKitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = RestKitTests.octest;
-			remoteRef = 0368B1AA16A50145002861AB /* PBXContainerItemProxy */;
+			remoteRef = 0389F829169BD38D00734A31 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0368B1AD16A50145002861AB /* RestKit.framework */ = {
+		0389F82C169BD38D00734A31 /* RestKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RestKit.framework;
-			remoteRef = 0368B1AC16A50145002861AB /* PBXContainerItemProxy */;
+			remoteRef = 0389F82B169BD38D00734A31 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0368B1AF16A50145002861AB /* RestKitFrameworkTests.octest */ = {
+		0389F82E169BD38D00734A31 /* RestKitFrameworkTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = RestKitFrameworkTests.octest;
-			remoteRef = 0368B1AE16A50145002861AB /* PBXContainerItemProxy */;
+			remoteRef = 0389F82D169BD38D00734A31 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -429,7 +421,7 @@
 				03408A2D1699083E0089B2C1 /* second.png in Resources */,
 				03408A2F1699083E0089B2C1 /* second@2x.png in Resources */,
 				03254FCE169A5743000336A1 /* BSKeyboardControls.strings in Resources */,
-				033EC78016A381CA00263C5F /* SDLogo.png in Resources */,
+				03254FD0169A78B7000336A1 /* SDLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,10 +481,10 @@
 			target = 034089FF1699083E0089B2C1 /* StudentConnect */;
 			targetProxy = 03408A3A1699083E0089B2C1 /* PBXContainerItemProxy */;
 		};
-		0368B1BF16A5027E002861AB /* PBXTargetDependency */ = {
+		0389F841169BD95100734A31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RestKit;
-			targetProxy = 0368B1BE16A5027E002861AB /* PBXContainerItemProxy */;
+			targetProxy = 0389F840169BD95100734A31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -504,15 +496,6 @@
 				03254FCC169A5743000336A1 /* en */,
 			);
 			name = BSKeyboardControls.strings;
-			sourceTree = "<group>";
-		};
-		033EC78216A381CA00263C5F /* SDLogo.png */ = {
-			isa = PBXVariantGroup;
-			children = (
-				033EC78116A381CA00263C5F /* en */,
-			);
-			name = SDLogo.png;
-			path = ../../../../Downloads;
 			sourceTree = "<group>";
 		};
 		03408A0D1699083E0089B2C1 /* InfoPlist.strings */ = {
@@ -572,10 +555,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -596,10 +577,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -611,9 +590,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
-				HEADER_SEARCH_PATHS = "“$(BUILT_PRODUCTS_DIR)/../../Headers”";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "StudentConnect/StudentConnect-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "-ObjC-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -624,9 +603,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudentConnect/StudentConnect-Prefix.pch";
-				HEADER_SEARCH_PATHS = "“$(BUILT_PRODUCTS_DIR)/../../Headers”";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "StudentConnect/StudentConnect-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "-ObjC-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
