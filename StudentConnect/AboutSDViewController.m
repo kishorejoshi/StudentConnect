@@ -30,6 +30,45 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
+    AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    [client setDefaultHeader:@"Content-Length" value:@"0"];
+    
+    
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/json"];
+
+    RKObjectMapping *objectMapping = [RKObjectMapping mappingForClass:[AboutContent class]];
+    
+    [objectMapping addAttributeMappingsFromDictionary:@{
+     @"ImageUrl":@"textImageUrl",
+     @"AboutUsHtml":@"textAboutUs"
+     }];
+    
+   [objectManager addResponseDescriptor: [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
+                                                                    pathPattern:nil
+                                                                    keyPath:nil
+                                                                    statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    
+    [objectManager postObject:nil  path:@"aboutcontent"
+                         parameters:nil
+                            success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
+                                AboutContent *object = mappingResult.firstObject;
+                                _textAboutSD.text = object.textAboutUs;
+                            }
+                            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error getting into"
+                                                                                message:[error localizedDescription]
+                                                                               delegate:nil
+                                                                      cancelButtonTitle:@"OK"
+                                                                      otherButtonTitles:nil];
+                                [alert show];
+                                NSLog(@"Hit error: %@", error);
+                            }
+     ];
 }
 
 - (void)didReceiveMemoryWarning

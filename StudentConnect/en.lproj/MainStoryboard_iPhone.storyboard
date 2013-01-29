@@ -719,7 +719,6 @@
                                                         <constraint firstAttribute="width" constant="308" id="36P-Du-dq6"/>
                                                         <constraint firstAttribute="height" constant="113" id="Iia-Gw-r5H"/>
                                                     </constraints>
-                                                    <string key="text">Something Digital (SD) is a dynamic, New York City-based Technology Services boutique offering three distinct practice groups—Interactive Design, Software, and IT Services—to meet diverse technology needs.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
@@ -785,6 +784,28 @@
     <resources>
         <image name="SDLogo.png" width="48" height="48"/>
     </resources>
+    <classes>
+        <class className="AboutSDViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutSDViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textAboutSD" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ContactUsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactUsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonSave:"/>
+                <relationship kind="outlet" name="textAboutMe" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="textEmail" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textMajor" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textPhone" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
