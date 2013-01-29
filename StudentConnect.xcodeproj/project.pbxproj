@@ -11,6 +11,11 @@
 		03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FC9169A5743000336A1 /* BSKeyboardControls.m */; };
 		03254FCE169A5743000336A1 /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCA169A5743000336A1 /* BSKeyboardControls.strings */; };
 		03254FD0169A78B7000336A1 /* SDLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCF169A78B7000336A1 /* SDLogo.png */; };
+		033BFA5E16B75D27005ED5F9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 033BFA5D16B75D27005ED5F9 /* Person.m */; };
+		033BFA6E16B75FC6005ED5F9 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 033BFA6D16B75FC5005ED5F9 /* Position.m */; };
+		033BFA7116B7607A005ED5F9 /* ContactInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 033BFA7016B7607A005ED5F9 /* ContactInfo.m */; };
+		033BFA7416B76254005ED5F9 /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033BFA7316B76253005ED5F9 /* PeopleViewController.m */; };
+		033BFA7716B764B6005ED5F9 /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033BFA7616B764B6005ED5F9 /* PositionViewController.m */; };
 		033EC76B16A3715500263C5F /* AboutSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033EC76A16A3715500263C5F /* AboutSDViewController.m */; };
 		033EC77216A3783300263C5F /* AboutContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 033EC77116A3783300263C5F /* AboutContent.m */; };
 		03408A051699083E0089B2C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03408A041699083E0089B2C1 /* UIKit.framework */; };
@@ -94,6 +99,16 @@
 		03254FCB169A5743000336A1 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 		03254FCC169A5743000336A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 		03254FCF169A78B7000336A1 /* SDLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SDLogo.png; path = ../../../../Downloads/SDLogo.png; sourceTree = "<group>"; };
+		033BFA5C16B75D27005ED5F9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		033BFA5D16B75D27005ED5F9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		033BFA6C16B75FC5005ED5F9 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		033BFA6D16B75FC5005ED5F9 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		033BFA6F16B7607A005ED5F9 /* ContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfo.h; sourceTree = "<group>"; };
+		033BFA7016B7607A005ED5F9 /* ContactInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfo.m; sourceTree = "<group>"; };
+		033BFA7216B76253005ED5F9 /* PeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleViewController.h; sourceTree = "<group>"; };
+		033BFA7316B76253005ED5F9 /* PeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleViewController.m; sourceTree = "<group>"; };
+		033BFA7516B764B6005ED5F9 /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
+		033BFA7616B764B6005ED5F9 /* PositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionViewController.m; sourceTree = "<group>"; };
 		033EC76916A3715500263C5F /* AboutSDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutSDViewController.h; sourceTree = "<group>"; };
 		033EC76A16A3715500263C5F /* AboutSDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSDViewController.m; sourceTree = "<group>"; };
 		033EC77016A3783300263C5F /* AboutContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutContent.h; sourceTree = "<group>"; };
@@ -186,6 +201,10 @@
 				03254FBE169A4B9F000336A1 /* ContactUsViewController.m */,
 				033EC76916A3715500263C5F /* AboutSDViewController.h */,
 				033EC76A16A3715500263C5F /* AboutSDViewController.m */,
+				033BFA7216B76253005ED5F9 /* PeopleViewController.h */,
+				033BFA7316B76253005ED5F9 /* PeopleViewController.m */,
+				033BFA7516B764B6005ED5F9 /* PositionViewController.h */,
+				033BFA7616B764B6005ED5F9 /* PositionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -195,6 +214,12 @@
 			children = (
 				033EC77016A3783300263C5F /* AboutContent.h */,
 				033EC77116A3783300263C5F /* AboutContent.m */,
+				033BFA5C16B75D27005ED5F9 /* Person.h */,
+				033BFA5D16B75D27005ED5F9 /* Person.m */,
+				033BFA6C16B75FC5005ED5F9 /* Position.h */,
+				033BFA6D16B75FC5005ED5F9 /* Position.m */,
+				033BFA6F16B7607A005ED5F9 /* ContactInfo.h */,
+				033BFA7016B7607A005ED5F9 /* ContactInfo.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -462,6 +487,11 @@
 				03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */,
 				033EC76B16A3715500263C5F /* AboutSDViewController.m in Sources */,
 				033EC77216A3783300263C5F /* AboutContent.m in Sources */,
+				033BFA5E16B75D27005ED5F9 /* Person.m in Sources */,
+				033BFA6E16B75FC6005ED5F9 /* Position.m in Sources */,
+				033BFA7116B7607A005ED5F9 /* ContactInfo.m in Sources */,
+				033BFA7416B76254005ED5F9 /* PeopleViewController.m in Sources */,
+				033BFA7716B764B6005ED5F9 /* PositionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
