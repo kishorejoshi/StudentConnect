@@ -44,6 +44,7 @@
 		0389F839169BD59700734A31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F838169BD59700734A31 /* MobileCoreServices.framework */; };
 		0389F83B169BD5A300734A31 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83A169BD5A300734A31 /* Security.framework */; };
 		0389F83D169BD5AE00734A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */; };
+		03F99EB716B895A000BB09EB /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F99EB616B895A000BB09EB /* PersonCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		0389F838169BD59700734A31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0389F83A169BD5A300734A31 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		03F99EB516B895A000BB09EB /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
+		03F99EB616B895A000BB09EB /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,7 @@
 		03408A0A1699083E0089B2C1 /* StudentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				03F99EB416B8956B00BB09EB /* CellData */,
 				033EC76C16A3775100263C5F /* Data */,
 				033EC76516A3291D00263C5F /* Controller */,
 				03254FC7169A5743000336A1 /* BSKeyboardControls */,
@@ -323,6 +327,15 @@
 				0389F82E169BD38D00734A31 /* RestKitFrameworkTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		03F99EB416B8956B00BB09EB /* CellData */ = {
+			isa = PBXGroup;
+			children = (
+				03F99EB516B895A000BB09EB /* PersonCell.h */,
+				03F99EB616B895A000BB09EB /* PersonCell.m */,
+			);
+			name = CellData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +505,7 @@
 				033BFA7116B7607A005ED5F9 /* ContactInfo.m in Sources */,
 				033BFA7416B76254005ED5F9 /* PeopleViewController.m in Sources */,
 				033BFA7716B764B6005ED5F9 /* PositionViewController.m in Sources */,
+				03F99EB716B895A000BB09EB /* PersonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

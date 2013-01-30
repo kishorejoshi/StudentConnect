@@ -7,13 +7,20 @@
 //
 
 #import "PeopleViewController.h"
+#import <RestKit/RestKit.h>
+#import "Person.h"
+#import "PersonCell.h"
+#define NUMBER_OF_SECTION 1
 
 @interface PeopleViewController ()
+
+@property (strong, nonatomic) NSArray *personData;
 
 @end
 
 @implementation PeopleViewController
-
+@synthesize StaticTableView, DynamicTableView;
+@synthesize personData;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -26,12 +33,53 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
+    AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    [client setDefaultHeader:@"Content-Length" value:@"0"];
+    
+    
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/json"];
+    
+    RKObjectMapping *objectMapping = [RKObjectMapping mappingForClass:[Person class]];
+    
+    [objectMapping addAttributeMappingsFromDictionary:@{
+     @"DisplayOrder":@"DisplayNumber",
+     @"Name":@"Name",
+     @"BioLink":@"BioLink",
+     @"ImageUrl":@"ImageUrl",
+     @"Title":@"Title",
+     @"MoreInfo":@"MoreInfo"
+     
+     }];
+    
+    [objectManager addResponseDescriptor: [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
+                                                                                  pathPattern:nil
+                                                                                      keyPath:nil
+                                                                                  statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    
+    [objectManager postObject:nil  path:@"people"
+                   parameters:nil
+                      success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
+                          personData = mappingResult.array;
+                          if(self.isViewLoaded)
+                              [DynamicTableView reloadData];
+                          
+                          
+                      }
+                      failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error getting into"
+                                                                          message:[error localizedDescription]
+                                                                         delegate:nil
+                                                                cancelButtonTitle:@"OK"
+                                                                otherButtonTitles:nil];
+                          [alert show];
+                          NSLog(@"Hit error: %@", error);
+                      }
+     ];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,29 +90,42 @@
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-  //  return 0;
-//}
-
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-  //  return 0;
-//}
-
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    // Return the number of sections.
+    return NUMBER_OF_SECTION;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+     // Return the number of rows in the section.
+    if(tableView == StaticTableView){
+        return [super tableView:tableView numberOfRowsInSection:section];
+    }
+    else{
+        return personData.count;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == StaticTableView) {
+        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
+    PersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell"];
+    Person *person = [personData objectAtIndex:indexPath.row];
+    cell.textDescription.text = person.MoreInfo;
+    cell.textTitle.text = person.Name;
     // Configure the cell...
-    
     return cell;
-}*/
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == StaticTableView) {
+        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    }
+    return 122;
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -58,6 +58,9 @@
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
                                 AboutContent *object = mappingResult.firstObject;
                                 _textAboutSD.text = object.textAboutUs;
+                                if (self.isViewLoaded) {
+                                    [_textAboutSD reloadInputViews];
+                                }
                             }
                             failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error getting into"
@@ -77,15 +80,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - Table view data source
 
-/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
-
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.

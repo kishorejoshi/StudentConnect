@@ -512,14 +512,62 @@
         <scene sceneID="14Y-PW-YQT">
             <objects>
                 <tableViewController id="Ekq-wp-vS4" customClass="PeopleViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dX6-kr-ZmH">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dX6-kr-ZmH">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
+                        <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="116" sectionHeaderHeight="1" sectionFooterHeight="1" id="00q-tJ-JDt">
+                            <rect key="frame" x="0.0" y="119" width="320" height="384"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
+                            <prototypes>
+                                <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PersonCell" rowHeight="122" id="z4v-tt-ow2" customClass="PersonCell">
+                                    <rect key="frame" x="0.0" y="1" width="320" height="122"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcA-fX-RSa">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnp-Bm-7VK">
+                                                <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="276" id="VHh-XO-HSP"/>
+                                                    <constraint firstAttribute="height" constant="83" id="iP9-af-xTW"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="fnp-Bm-7VK" firstAttribute="top" secondItem="z4v-tt-ow2" secondAttribute="top" constant="33" id="FA5-gW-R9g"/>
+                                        <constraint firstItem="XcA-fX-RSa" firstAttribute="leading" secondItem="z4v-tt-ow2" secondAttribute="leading" constant="20" type="default" id="SUz-Fs-Fxf"/>
+                                        <constraint firstItem="XcA-fX-RSa" firstAttribute="top" secondItem="z4v-tt-ow2" secondAttribute="top" constant="9" id="Xar-S9-fge"/>
+                                        <constraint firstItem="fnp-Bm-7VK" firstAttribute="leading" secondItem="z4v-tt-ow2" secondAttribute="leading" constant="15" id="aQt-yi-8OG"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="textDescription" destination="fnp-Bm-7VK" id="DJp-6V-c8T"/>
+                                        <outlet property="textTitle" destination="XcA-fX-RSa" id="UBQ-ll-byj"/>
+                                    </connections>
+                                </tableViewCell>
+                            </prototypes>
+                            <connections>
+                                <outlet property="dataSource" destination="Ekq-wp-vS4" id="rN8-YS-i1e"/>
+                                <outlet property="delegate" destination="Ekq-wp-vS4" id="TjI-5p-H2x"/>
+                            </connections>
+                        </tableView>
                         <sections>
-                            <tableViewSection id="OCK-hI-FLX">
+                            <tableViewSection id="qqb-A2-19T">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="67" id="eqh-e9-UzD">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="67" id="eqh-e9-UzD">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -552,14 +600,14 @@
                                             <constraint firstItem="oho-Zx-ElQ" firstAttribute="leading" secondItem="eqh-e9-UzD" secondAttribute="leading" constant="10" id="y7y-NU-LJe"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="50" id="Bmm-JT-Jpr">
-                                        <rect key="frame" x="0.0" y="67" width="320" height="50"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="52" id="Bmm-JT-Jpr">
+                                        <rect key="frame" x="0.0" y="67" width="320" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here are some of the people you'll meet at the career fair:" translatesAutoresizingMaskIntoConstraints="NO" id="NsV-YF-chR">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Here are some of the people you'll meet at the career fair:" translatesAutoresizingMaskIntoConstraints="NO" id="NsV-YF-chR">
                                                     <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="Dwt-fs-2XY"/>
@@ -572,80 +620,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="NsV-YF-chR" firstAttribute="top" secondItem="Bmm-JT-Jpr" secondAttribute="top" constant="1" id="LCu-DY-5zG"/>
+                                            <constraint firstItem="NsV-YF-chR" firstAttribute="top" secondItem="Bmm-JT-Jpr" secondAttribute="top" type="default" id="bYr-nX-cUZ"/>
                                             <constraint firstItem="NsV-YF-chR" firstAttribute="leading" secondItem="Bmm-JT-Jpr" secondAttribute="leading" constant="12" id="vdl-lV-Nso"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="120" id="yul-x1-pQc">
-                                        <rect key="frame" x="0.0" y="117" width="320" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Betsy Garcia // HR Manager " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2Y-St-E9g">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="LZL-fK-HTr"/>
-                                                        <constraint firstAttribute="width" constant="243" id="qlP-3x-PEn"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDa-1C-PPo">
-                                                    <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="277" id="Wpw-dS-FpE"/>
-                                                        <constraint firstAttribute="height" constant="84" id="x50-hz-clZ"/>
-                                                    </constraints>
-                                                    <string key="text">Betsy has been with SD for 2 years and manages our Human Resources department. Betsy will be your key contact if you plan to pursue a career with SD.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="EDa-1C-PPo" firstAttribute="top" secondItem="yul-x1-pQc" secondAttribute="top" constant="30" id="GRf-me-rvL"/>
-                                            <constraint firstItem="J2Y-St-E9g" firstAttribute="leading" secondItem="yul-x1-pQc" secondAttribute="leading" constant="31" id="V9v-Ol-00w"/>
-                                            <constraint firstItem="EDa-1C-PPo" firstAttribute="leading" secondItem="yul-x1-pQc" secondAttribute="leading" constant="29" id="W6i-k2-Idz"/>
-                                            <constraint firstItem="J2Y-St-E9g" firstAttribute="top" secondItem="yul-x1-pQc" secondAttribute="top" constant="7" id="mu3-xk-omR"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="125" id="fJd-j5-9te">
-                                        <rect key="frame" x="0.0" y="237" width="320" height="125"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Glenn Ferrie // Practice Manager " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ab-g7-ANf">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="260" id="4hP-6G-vHP"/>
-                                                        <constraint firstAttribute="height" constant="25" id="nNM-ta-CgX"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fie-Mr-QIq">
-                                                    <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="84" id="FeB-np-Huc"/>
-                                                        <constraint firstAttribute="width" constant="277" id="G3B-tz-fvw"/>
-                                                    </constraints>
-                                                    <string key="text">Glenn runs our Microsoft Business Productivity practice and is involved in both the business development and deliery aspects of the business.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="8ab-g7-ANf" firstAttribute="top" secondItem="fJd-j5-9te" secondAttribute="top" constant="5" id="IVG-9B-UyA"/>
-                                            <constraint firstItem="fie-Mr-QIq" firstAttribute="leading" secondItem="8ab-g7-ANf" secondAttribute="leading" type="default" id="avC-01-dLE"/>
-                                            <constraint firstItem="8ab-g7-ANf" firstAttribute="centerX" secondItem="fJd-j5-9te" secondAttribute="centerX" type="default" id="q5e-ru-miU"/>
-                                            <constraint firstItem="fie-Mr-QIq" firstAttribute="top" secondItem="fJd-j5-9te" secondAttribute="top" constant="30" id="t66-7Q-JDf"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -657,6 +633,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="People" id="kfj-wW-T8G"/>
+                    <connections>
+                        <outlet property="DynamicTableView" destination="00q-tJ-JDt" id="aVB-e3-iMb"/>
+                        <outlet property="StaticTableView" destination="dX6-kr-ZmH" id="vaO-V5-MeY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIp-UM-3z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -713,7 +693,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-Dl-B7y">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-Dl-B7y">
                                                     <color key="backgroundColor" red="0.67731491629999996" green="0.65455102539999999" blue="0.6878396739" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="308" id="36P-Du-dq6"/>
@@ -807,6 +787,17 @@
         </class>
         <class className="PeopleViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PeopleViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="DynamicTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="StaticTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="PersonCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PersonCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textDescription" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="textTitle" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="PositionViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PositionViewController.h"/>

@@ -9,10 +9,12 @@
 #import "Person.h"
 
 @implementation Person
+
 @synthesize DisplayNumber;
 @synthesize Name;
 @synthesize Title;
 @synthesize MoreInfo;
 @synthesize BioLink;
 @synthesize ImageUrl;
+
 @end

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <RestKit/RestKit.h>
 
 @interface AboutSDViewController : UITableViewController
+
 @property (weak, nonatomic) IBOutlet UITextView *textAboutSD;
 
 @end
