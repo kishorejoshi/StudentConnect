@@ -33,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
     AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     
@@ -115,7 +116,8 @@
     PersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell"];
     Person *person = [personData objectAtIndex:indexPath.row];
     cell.textDescription.text = person.MoreInfo;
-    cell.textTitle.text = person.Name;
+    cell.textTitle.text = person.Title;
+    cell.textName.text = person.Name;
     // Configure the cell...
     return cell;
 }
@@ -124,7 +126,7 @@
     if (tableView == StaticTableView) {
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
     }
-    return 122;
+    return 132;
 }
 
 /*

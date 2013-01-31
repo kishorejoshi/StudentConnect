@@ -7,12 +7,21 @@
 //
 
 #import "PositionViewController.h"
+#import "Position.h"    
+#import "PositionCell.h"
+#import <RestKit/RestKit.h>
+#define NUMBER_OF_SECTION 1
 
 @interface PositionViewController ()
+
+@property (strong, nonatomic) NSArray *positionData;
 
 @end
 
 @implementation PositionViewController
+
+@synthesize StaticTableView,DynamicTableView;
+@synthesize positionData;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,11 +36,50 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
+    AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    [client setDefaultHeader:@"Content-Length" value:@"0"];
+    
+    
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/json"];
+    
+    RKObjectMapping *objectMapping = [RKObjectMapping mappingForClass:[Position class]];
+    
+    [objectMapping addAttributeMappingsFromDictionary:@{
+    
+     @"Title":@"Title",
+      @"Description":@"Description"
+     
+     }];
+    
+    [objectManager addResponseDescriptor: [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
+                                                                                  pathPattern:nil
+                                                                                      keyPath:nil
+                                                                                  statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    
+    [objectManager postObject:nil  path:@"positiondetails"
+                   parameters:nil
+                      success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
+                          positionData = mappingResult.array;
+                          if(self.isViewLoaded)
+                              [DynamicTableView reloadData];
+                          
+                          
+                      }
+                      failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error getting into"
+                                                                          message:[error localizedDescription]
+                                                                         delegate:nil
+                                                                cancelButtonTitle:@"OK"
+                                                                otherButtonTitles:nil];
+                          [alert show];
+                          NSLog(@"Hit error: %@", error);
+                      }
+     ];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,29 +90,51 @@
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-  //  return 0;
-//}
-
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-  //  return 0;
-//}
-
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    // Return the number of sections.
+    return NUMBER_OF_SECTION;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    if(tableView == StaticTableView){
+        return [super tableView:tableView numberOfRowsInSection:section];
+    }
+    else{
+        return positionData.count;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == StaticTableView) {
+        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
+    PositionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PositionCell"];
+    Position *position = [positionData objectAtIndex:indexPath.row];
+    cell.textDescription.text = position.Description;
+    cell.textTitle.text = position.Title;
     
+    /*CGRect frame = cell.textDescription.frame;
+    frame.size.height = cell.textDescription.contentSize.height;
+    cell.textDescription.frame = frame;
     // Configure the cell...
     
+    CGRect cellFrame = cell.frame;
+    cellFrame.size.height = frame.size.height + 40;
+    cell.frame = cellFrame;*/
     return cell;
-}*/
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == StaticTableView) {
+        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    }
+    return 122;
+}
 
 /*
 // Override to support conditional editing of the table view.

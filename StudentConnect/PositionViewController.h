@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PositionViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UITableView *StaticTableView;
+@property (weak, nonatomic) IBOutlet UITableView *DynamicTableView;
 
 @end

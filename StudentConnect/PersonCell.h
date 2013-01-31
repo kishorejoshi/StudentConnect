@@ -11,4 +11,5 @@
 @interface PersonCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *textTitle;
 @property (weak, nonatomic) IBOutlet UITextView *textDescription;
+@property (weak, nonatomic) IBOutlet UILabel *textName;
 @end
