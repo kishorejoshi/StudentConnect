@@ -739,7 +739,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbT-Ke-U5i">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="dzg-F7-2Lc"/>
+                                    <constraint firstAttribute="height" constant="33" id="Keo-8P-HhL"/>
+                                    <constraint firstAttribute="width" constant="254" id="iWv-vT-Tfe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login">
@@ -753,25 +754,57 @@
                                     <action selector="buttonLogin:" destination="sAr-Ax-6pF" eventType="touchUpInside" id="cgx-zC-EuP"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVb-1B-zVG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Passcode Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVb-1B-zVG">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="pHl-nm-9SL"/>
+                                    <constraint firstAttribute="width" constant="175" id="3JU-Z7-ZsJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Passcode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okt-D5-eAi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="BPV-9v-9o4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Something Digital" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lc-1Q-ZaA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="jnb-bB-oze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Incorrect passcode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7O-Af-GT3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="0hI-LQ-Qxa"/>
+                                    <constraint firstAttribute="height" constant="21" id="kX6-0O-Zfd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.97371253188775508" green="0.018052538094962593" blue="0.10282796297586194" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88083814540000005" green="0.51330696259999997" blue="0.14872121739999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lbT-Ke-U5i" firstAttribute="top" secondItem="ilJ-gy-L6s" secondAttribute="top" constant="57" id="D67-QF-D5b"/>
-                            <constraint firstItem="sVb-1B-zVG" firstAttribute="top" secondItem="ilJ-gy-L6s" secondAttribute="top" constant="153" id="OeN-g8-tUE"/>
-                            <constraint firstItem="lbT-Ke-U5i" firstAttribute="centerX" secondItem="sVb-1B-zVG" secondAttribute="centerX" type="default" id="eFB-8n-3Kw"/>
-                            <constraint firstItem="lbT-Ke-U5i" firstAttribute="centerX" secondItem="ilJ-gy-L6s" secondAttribute="centerX" type="default" id="kdx-Uj-rVA"/>
+                            <constraint firstItem="j7O-Af-GT3" firstAttribute="leading" secondItem="sVb-1B-zVG" secondAttribute="leading" type="default" id="1Tj-u4-8WZ"/>
+                            <constraint firstItem="lbT-Ke-U5i" firstAttribute="top" secondItem="ilJ-gy-L6s" secondAttribute="top" constant="230" id="2NZ-Wo-cfj"/>
+                            <constraint firstItem="sVb-1B-zVG" firstAttribute="leading" secondItem="ilJ-gy-L6s" secondAttribute="leading" constant="104" id="72N-Sl-lu9"/>
+                            <constraint firstItem="okt-D5-eAi" firstAttribute="top" secondItem="ilJ-gy-L6s" secondAttribute="top" constant="165" id="9IU-Ph-B2J"/>
+                            <constraint firstItem="lbT-Ke-U5i" firstAttribute="centerX" secondItem="8lc-1Q-ZaA" secondAttribute="centerX" type="default" id="9ib-Wr-5vX"/>
+                            <constraint firstItem="j7O-Af-GT3" firstAttribute="top" secondItem="ilJ-gy-L6s" secondAttribute="top" constant="189" id="bbU-Rg-ojv"/>
+                            <constraint firstItem="8lc-1Q-ZaA" firstAttribute="top" secondItem="ilJ-gy-L6s" secondAttribute="top" constant="84" id="e0S-Xm-UpZ"/>
+                            <constraint firstItem="okt-D5-eAi" firstAttribute="leading" secondItem="ilJ-gy-L6s" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jEb-3M-WBk"/>
+                            <constraint firstItem="sVb-1B-zVG" firstAttribute="top" secondItem="ilJ-gy-L6s" secondAttribute="top" constant="161" id="kkb-5R-KjE"/>
+                            <constraint firstItem="lbT-Ke-U5i" firstAttribute="leading" secondItem="ilJ-gy-L6s" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xt1-5H-qFU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OdI-PT-VGA"/>
                     <connections>
                         <outlet property="buttonLogin" destination="lbT-Ke-U5i" id="rni-cz-XKX"/>
+                        <outlet property="textError" destination="j7O-Af-GT3" id="Qcc-U0-oRS"/>
                         <outlet property="textPasscode" destination="sVb-1B-zVG" id="L5n-RP-nwd"/>
                     </connections>
                 </viewController>
@@ -823,67 +856,6 @@
     <resources>
         <image name="SDLogo.png" width="48" height="48"/>
     </resources>
-    <classes>
-        <class className="AboutSDViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutSDViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textAboutSD" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ContactUsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactUsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonSave:"/>
-                <relationship kind="outlet" name="textAboutMe" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="textEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textMajor" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textPhone" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="buttonLogin" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textPasscode" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PeopleViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PeopleViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="DynamicTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="StaticTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="PersonCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PersonCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textDescription" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="textName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PositionCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PositionCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textDescription" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="textTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PositionViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PositionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="DynamicTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="StaticTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="TabBarViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

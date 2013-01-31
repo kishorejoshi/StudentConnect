@@ -10,6 +10,9 @@
 		0306887016B9E8FF00FEFCFC /* PositionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0306886F16B9E8FF00FEFCFC /* PositionCell.m */; };
 		0306887616B9FC1E00FEFCFC /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0306887516B9FC1E00FEFCFC /* TabBarViewController.m */; };
 		0306887C16BA08F900FEFCFC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0306887B16BA08F900FEFCFC /* LoginViewController.m */; };
+		03184D7516BA20A50095D606 /* SchoolData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03184D7416BA20A50095D606 /* SchoolData.m */; };
+		03184D7816BA24BF0095D606 /* PasscodeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 03184D7716BA24BF0095D606 /* PasscodeRequest.m */; };
+		03184D7B16BA2B910095D606 /* SchoolAliasRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 03184D7A16BA2B910095D606 /* SchoolAliasRequest.m */; };
 		03254FBF169A4B9F000336A1 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FBE169A4B9F000336A1 /* ContactUsViewController.m */; };
 		03254FCD169A5743000336A1 /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 03254FC9169A5743000336A1 /* BSKeyboardControls.m */; };
 		03254FCE169A5743000336A1 /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03254FCA169A5743000336A1 /* BSKeyboardControls.strings */; };
@@ -47,6 +50,8 @@
 		0389F839169BD59700734A31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F838169BD59700734A31 /* MobileCoreServices.framework */; };
 		0389F83B169BD5A300734A31 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83A169BD5A300734A31 /* Security.framework */; };
 		0389F83D169BD5AE00734A31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */; };
+		03F7C71916BAD71E00F04A44 /* IsValidResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7C71816BAD71E00F04A44 /* IsValidResponse.m */; };
+		03F7C71C16BAE16F00F04A44 /* authenticateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7C71B16BAE16F00F04A44 /* authenticateResponse.m */; };
 		03F99EB716B895A000BB09EB /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F99EB616B895A000BB09EB /* PersonCell.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +107,12 @@
 		0306887516B9FC1E00FEFCFC /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		0306887A16BA08F900FEFCFC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0306887B16BA08F900FEFCFC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		03184D7316BA20A50095D606 /* SchoolData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolData.h; sourceTree = "<group>"; };
+		03184D7416BA20A50095D606 /* SchoolData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolData.m; sourceTree = "<group>"; };
+		03184D7616BA24BF0095D606 /* PasscodeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasscodeRequest.h; sourceTree = "<group>"; };
+		03184D7716BA24BF0095D606 /* PasscodeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasscodeRequest.m; sourceTree = "<group>"; };
+		03184D7916BA2B910095D606 /* SchoolAliasRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolAliasRequest.h; sourceTree = "<group>"; };
+		03184D7A16BA2B910095D606 /* SchoolAliasRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolAliasRequest.m; sourceTree = "<group>"; };
 		03254FBD169A4B9F000336A1 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		03254FBE169A4B9F000336A1 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		03254FC8169A5743000336A1 /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSKeyboardControls.h; sourceTree = "<group>"; };
@@ -154,6 +165,10 @@
 		0389F838169BD59700734A31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0389F83A169BD5A300734A31 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0389F83C169BD5AE00734A31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		03F7C71716BAD71E00F04A44 /* IsValidResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsValidResponse.h; sourceTree = "<group>"; };
+		03F7C71816BAD71E00F04A44 /* IsValidResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsValidResponse.m; sourceTree = "<group>"; };
+		03F7C71A16BAE16F00F04A44 /* authenticateResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authenticateResponse.h; sourceTree = "<group>"; };
+		03F7C71B16BAE16F00F04A44 /* authenticateResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = authenticateResponse.m; sourceTree = "<group>"; };
 		03F99EB516B895A000BB09EB /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
 		03F99EB616B895A000BB09EB /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +251,16 @@
 				033BFA6D16B75FC5005ED5F9 /* Position.m */,
 				033BFA6F16B7607A005ED5F9 /* ContactInfo.h */,
 				033BFA7016B7607A005ED5F9 /* ContactInfo.m */,
+				03184D7316BA20A50095D606 /* SchoolData.h */,
+				03184D7416BA20A50095D606 /* SchoolData.m */,
+				03184D7616BA24BF0095D606 /* PasscodeRequest.h */,
+				03184D7716BA24BF0095D606 /* PasscodeRequest.m */,
+				03184D7916BA2B910095D606 /* SchoolAliasRequest.h */,
+				03184D7A16BA2B910095D606 /* SchoolAliasRequest.m */,
+				03F7C71716BAD71E00F04A44 /* IsValidResponse.h */,
+				03F7C71816BAD71E00F04A44 /* IsValidResponse.m */,
+				03F7C71A16BAE16F00F04A44 /* authenticateResponse.h */,
+				03F7C71B16BAE16F00F04A44 /* authenticateResponse.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -524,6 +549,11 @@
 				0306887016B9E8FF00FEFCFC /* PositionCell.m in Sources */,
 				0306887616B9FC1E00FEFCFC /* TabBarViewController.m in Sources */,
 				0306887C16BA08F900FEFCFC /* LoginViewController.m in Sources */,
+				03184D7516BA20A50095D606 /* SchoolData.m in Sources */,
+				03184D7816BA24BF0095D606 /* PasscodeRequest.m in Sources */,
+				03184D7B16BA2B910095D606 /* SchoolAliasRequest.m in Sources */,
+				03F7C71916BAD71E00F04A44 /* IsValidResponse.m in Sources */,
+				03F7C71C16BAE16F00F04A44 /* authenticateResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

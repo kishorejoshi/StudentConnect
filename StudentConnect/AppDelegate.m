@@ -10,6 +10,7 @@
 #import <RestKit/RestKit.h>
 
 @implementation AppDelegate
+@synthesize schoolalias;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

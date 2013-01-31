@@ -11,5 +11,6 @@
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *buttonLogin;
 @property (weak, nonatomic) IBOutlet UITextField *textPasscode;
+@property (weak, nonatomic) IBOutlet UILabel *textError;
 
 @end

@@ -39,14 +39,15 @@
     NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
     AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     
-    [client setDefaultHeader:@"Content-Length" value:@"0"];
-    
+    //[client setDefaultHeader:@"Content-Length" value:@"0"];
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
-    
+
     [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/json"];
     
     RKObjectMapping *objectMapping = [RKObjectMapping mappingForClass:[Position class]];
+    
     
     [objectMapping addAttributeMappingsFromDictionary:@{
     
