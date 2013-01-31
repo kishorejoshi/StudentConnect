@@ -9,6 +9,6 @@
 #import "PersonCell.h"
 
 @implementation PersonCell
-@synthesize textDescription, textTitle, textName ;
+@synthesize textDescription, textTitle ;
 
 @end

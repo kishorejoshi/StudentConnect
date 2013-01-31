@@ -116,8 +116,7 @@
     PersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell"];
     Person *person = [personData objectAtIndex:indexPath.row];
     cell.textDescription.text = person.MoreInfo;
-    cell.textTitle.text = person.Title;
-    cell.textName.text = person.Name;
+    cell.textTitle.text = [NSString stringWithFormat:@"%@%@%@",person.Name, @" || ", person.Title];
     // Configure the cell...
     return cell;
 }
