@@ -10,6 +10,7 @@
 #import "Position.h"    
 #import "PositionCell.h"
 #import <RestKit/RestKit.h>
+#import "SchoolMetadata.h"
 #define NUMBER_OF_SECTION 1
 
 @interface PositionViewController ()
@@ -35,6 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.StaticTableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
 
     NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
     AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
@@ -60,9 +62,10 @@
                                                                                   pathPattern:nil
                                                                                       keyPath:nil
                                                                                   statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+       SchoolMetadata *schoolObj = [SchoolMetadata getInstance];
     
     [objectManager postObject:nil  path:@"positiondetails"
-                   parameters:nil
+                   parameters:@{@"SchoolAlias" : schoolObj.Alias}
                       success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
                           positionData = mappingResult.array;
                           if(self.isViewLoaded)
@@ -134,7 +137,7 @@
     if (tableView == StaticTableView) {
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
     }
-    return 122;
+    return 118;
 }
 
 /*

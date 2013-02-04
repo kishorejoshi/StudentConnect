@@ -19,5 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textMajor;
 @property (weak, nonatomic) IBOutlet UITextView *textAboutMe;
 - (IBAction)buttonSave:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UISwitch *switchSoftware;
+@property (weak, nonatomic) IBOutlet UISwitch *switchProgram;
+@property (strong, nonatomic) IBOutlet UITableView *StaticTableView;
 @end

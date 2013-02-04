@@ -9,6 +9,7 @@
 #import "AboutSDViewController.h"
 #import <RestKit/RestKit.h>
 #import "AboutContent.h"
+#import "SchoolMetadata.h"
 
 @interface AboutSDViewController ()
 
@@ -17,6 +18,7 @@
 @implementation AboutSDViewController
 
 @synthesize textAboutSD = _textAboutSD;
+@synthesize StaticTableView;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,11 +32,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.StaticTableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
     AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     
-    [client setDefaultHeader:@"Content-Length" value:@"0"];
+    //[client setDefaultHeader:@"Content-Length" value:@"0"];
     
     
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
@@ -47,6 +50,7 @@
      @"ImageUrl":@"textImageUrl",
      @"AboutUsHtml":@"textAboutUs"
      }];
+    SchoolMetadata *schoolObj = [SchoolMetadata getInstance];
     
    [objectManager addResponseDescriptor: [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
                                                                     pathPattern:nil
@@ -54,7 +58,7 @@
                                                                     statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
     
     [objectManager postObject:nil  path:@"aboutcontent"
-                         parameters:nil
+                         parameters:@{@"SchoolAlias":schoolObj.Alias}
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
                                 AboutContent *object = mappingResult.firstObject;
                                 _textAboutSD.text = object.textAboutUs;

@@ -18,5 +18,5 @@
 @property (nonatomic, retain) NSString* Interests;
 @property (nonatomic, retain) NSString* PreferredContactMethod;
 @property (nonatomic, retain) NSString* RequesterID;
-@property (nonatomic, retain) NSDate* LastUpdated;
+@property (nonatomic, retain) NSString* LastUpdated;
 @end

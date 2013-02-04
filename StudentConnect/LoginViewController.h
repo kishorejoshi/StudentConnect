@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSKeyboardControls.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController<UITextFieldDelegate,BSKeyboardControlsDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *buttonLogin;
 @property (weak, nonatomic) IBOutlet UITextField *textPasscode;
 @property (weak, nonatomic) IBOutlet UILabel *textError;

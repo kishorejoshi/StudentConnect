@@ -12,5 +12,6 @@
 @interface AboutSDViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *textAboutSD;
+@property (strong, nonatomic) IBOutlet UITableView *StaticTableView;
 
 @end

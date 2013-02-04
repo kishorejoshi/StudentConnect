@@ -9,18 +9,81 @@
 #import "LoginViewController.h"
 #import "TabBarViewController.h"
 #import  <RestKit/RestKit.h>
-#import "SchoolData.h"
-#import "PasscodeRequest.h"
-#import "IsValidResponse.h"
 #import "authenticateResponse.h"
+#import "SchoolMetadata.h"
 
 @interface LoginViewController ()
+/**
+ *  Keyboard controls.
+ */
+@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 
+/**
+ *  Scroll view to text field.
+ *  @param textField Text field to scroll to.
+ */
+- (void)scrollViewToTextField:(id)textField;
 @end
+
 @implementation LoginViewController
 
 @synthesize textPasscode;
 @synthesize textError;
+@synthesize keyboardControls =_keyboardControls;
+
+/* Scroll the view to the active text field */
+- (void)scrollViewToTextField:(id)textField
+{
+    //UITableViewCell *cell = (UITableViewCell *) ((UIView *) textField).superview.superview;
+    //[self.StaticTableView scrollRectToVisible:cell.frame animated:YES];
+}
+
+#pragma mark -
+#pragma mark BSKeyboardControls Delegate
+
+/*
+ * The "Done" button was pressed
+ * We want to close the keyboard
+ */
+- (void)keyboardControlsDonePressed:(BSKeyboardControls *)controls
+{
+    [controls.activeTextField resignFirstResponder];
+}
+
+/* Either "Previous" or "Next" was pressed
+ * Here we usually want to scroll the view to the active text field
+ * If we want to know which of the two was pressed, we can use the "direction" which will have one of the following values:
+ * KeyboardControlsDirectionPrevious        "Previous" was pressed
+ * KeyboardControlsDirectionNext            "Next" was pressed
+ */
+/*- (void)keyboardControlsPreviousNextPressed:(BSKeyboardControls *)controls withDirection:(KeyboardControlsDirection)direction andActiveTextField:(id)textField
+{
+    [textField becomeFirstResponder];
+    [self scrollViewToTextField:textField];
+}*/
+
+#pragma mark -
+#pragma mark Text Field Delegate
+
+/* Editing began */
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if ([self.keyboardControls.textFields containsObject:textField])
+        self.keyboardControls.activeTextField = textField;
+    [self scrollViewToTextField:textField];
+}
+
+#pragma mark -
+#pragma mark Text View Delegate
+
+/* Editing began */
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([self.keyboardControls.textFields containsObject:textView])
+        self.keyboardControls.activeTextField = textView;
+    [self scrollViewToTextField:textView];
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,11 +100,13 @@
     [super viewDidLoad];
     [textError setHidden:TRUE];
 
-    [self.textPasscode setDelegate:self];
+   [self.textPasscode setDelegate:self];
     [self.textPasscode setReturnKeyType:UIReturnKeyDone];
     [self.textPasscode addTarget:self
                        action:@selector(textFieldFinished:)
              forControlEvents:UIControlEventEditingDidEndOnExit];
+    // Initialize the keyboard control
+
 }
 
 - (IBAction)textFieldFinished:(id)sender
@@ -69,8 +134,8 @@
     RKObjectMapping *authResponse = [RKObjectMapping mappingForClass:[authenticateResponse class]];
     
     [authResponse addAttributeMappingsFromDictionary:@{
-     @"Alias":@"Alias",
-     @"Passcode":@"Passcode",
+     @"SchoolData.Alias":@"Alias",
+     @"SchoolData.Passcode":@"Passcode",
      @"IsValidated":@"IsValidated"
      }];
     
@@ -87,6 +152,10 @@
                           authenticateResponse* response = mappingResult.firstObject;
                           if([response.IsValidated isEqualToString:@"true"])
                           {
+                              
+                              SchoolMetadata *schoolObj = [SchoolMetadata getInstance];
+                              schoolObj.Alias = response.Alias;
+                              schoolObj.Passcode = response.Passcode;
                               TabBarViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
                               [self.navigationController pushViewController:controller animated:YES];
                           }

@@ -9,5 +9,5 @@
 #import "authenticateResponse.h"
 
 @implementation authenticateResponse
-@synthesize schooldata,IsValidated;
+@synthesize Alias,Passcode,IsValidated;
 @end

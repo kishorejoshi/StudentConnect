@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SchoolData.h"
 
 @interface authenticateResponse : NSObject
 @property (nonatomic, retain) NSString* IsValidated;
-@property (nonatomic, retain) SchoolData* schooldata;
+@property (nonatomic, retain) NSString* Alias;
+@property (nonatomic, retain) NSString* Passcode;
 @end

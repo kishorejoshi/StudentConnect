@@ -10,6 +10,8 @@
 #import <RestKit/RestKit.h>
 #import "Person.h"
 #import "PersonCell.h"
+#import "SchoolMetadata.h"
+
 #define NUMBER_OF_SECTION 1
 
 @interface PeopleViewController ()
@@ -33,11 +35,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.StaticTableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
     AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     
-    [client setDefaultHeader:@"Content-Length" value:@"0"];
+    //[client setDefaultHeader:@"Content-Length" value:@"0"];
     
     
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
@@ -60,9 +63,10 @@
                                                                                   pathPattern:nil
                                                                                       keyPath:nil
                                                                                   statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    SchoolMetadata *schoolObj = [SchoolMetadata getInstance];
     
     [objectManager postObject:nil  path:@"people"
-                   parameters:nil
+                   parameters:@{@"SchoolAlias":schoolObj.Alias}
                       success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
                           personData = mappingResult.array;
                           if(self.isViewLoaded)
@@ -116,7 +120,7 @@
     PersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell"];
     Person *person = [personData objectAtIndex:indexPath.row];
     cell.textDescription.text = person.MoreInfo;
-    cell.textTitle.text = [NSString stringWithFormat:@"%@%@%@",person.Name, @" || ", person.Title];
+    cell.textTitle.text = [NSString stringWithFormat:@"%@%@%@",person.Name, @" | ", person.Title];
     // Configure the cell...
     return cell;
 }
@@ -125,7 +129,7 @@
     if (tableView == StaticTableView) {
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
     }
-    return 132;
+    return 128;
 }
 
 /*

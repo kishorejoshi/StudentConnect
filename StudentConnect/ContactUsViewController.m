@@ -7,6 +7,10 @@
 //
 
 #import "ContactUsViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "ContactInfo.h"
+#import "SchoolMetadata.h"
+#import "ContactInfoResponse.h"
 
 #define SCROLL_VIEW_ANIMATION_DURATION 0.25
 
@@ -32,14 +36,17 @@
             textPhone = _textPhone,
             textMajor = _textMajor,
             textAboutMe= _textAboutMe,
-            keyboardControls = _keyboardControls;
+            switchProgram = _switchProgram,
+            switchSoftware = _switchSoftware,
+            keyboardControls = _keyboardControls,
+            StaticTableView;
 
 
 /* Scroll the view to the active text field */
 - (void)scrollViewToTextField:(id)textField
 {
     UITableViewCell *cell = (UITableViewCell *) ((UIView *) textField).superview.superview;
-    [self.tableView scrollRectToVisible:cell.frame animated:YES];
+    [self.StaticTableView scrollRectToVisible:cell.frame animated:YES];
 }
 
 #pragma mark -
@@ -103,6 +110,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.StaticTableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    _textAboutMe.layer.borderWidth = 0.5f;
+    _textAboutMe.layer.borderColor = [[UIColor grayColor] CGColor];
+    _textAboutMe.layer.cornerRadius = 5;
+    _textAboutMe.clipsToBounds = YES;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -193,7 +205,7 @@
 
 //textView about me delegate to clear the default text
 //textview on focus delegate
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textAboutMe
+/*- (BOOL)textViewShouldBeginEditing:(UITextView *)textAboutMe
 {
     //on focus
     if([textAboutMe.text isEqualToString:@"Tell Us about Yourself!!!"])
@@ -213,10 +225,10 @@
         [textAboutMe resignFirstResponder];
     }
     return YES;
-}
+}*/
 
 
-- (void)viewDidUnload
+/*- (void)viewDidUnload
 {
     [self setTextName:nil];
     [self setTextEmail:nil];
@@ -225,15 +237,98 @@
     [self setTextAboutMe:nil];
     
     [super viewDidUnload];
-}
+}*/
 
 
 - (IBAction)buttonSave:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Save!!"
-                                                    message:@"Save button Clicked."
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+   
+    
+    NSURL *baseURL =[NSURL URLWithString:@"http://studentconnect.apphb.com/api/"];
+    AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/json"];
+    
+    SchoolMetadata *schoolObj = [SchoolMetadata getInstance];
+    NSDate* currentDate = [NSDate date];
+    CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+    
+    ContactInfo *contactinfo = [[ContactInfo alloc] init];
+    contactinfo.FullName = _textName.text;
+    contactinfo.EmailAddress = _textEmail.text;
+    contactinfo.PhoneNumber = _textPhone.text;
+    contactinfo.Major =_textMajor.text;
+    contactinfo.LastUpdated = [currentDate description];
+    contactinfo.PreferredContactMethod = @"Email";
+    contactinfo.School = schoolObj.Alias;
+    contactinfo.About = _textAboutMe.text;
+    contactinfo.Interests = @"Software developer";
+    
+    if(_switchSoftware.isOn)
+    {
+        contactinfo.Interests = @"Software Developer";
+    }
+    if(_switchProgram.isOn)
+    {
+        contactinfo.Interests = [NSString stringWithFormat:@"%@%@%@",contactinfo.Interests, @"|", @"Program Manager"];
+    }
+    
+    
+    contactinfo.RequesterID = (__bridge NSString *)CFUUIDCreateString(NULL,uuidRef);
+    
+    
+    
+    RKObjectMapping *responseObjMapping = [RKObjectMapping mappingForClass:[ContactInfoResponse class]];
+    
+    [responseObjMapping addAttributeMappingsFromDictionary:@{
+     @"result":@"result"     
+     }];
+    
+    [objectManager addResponseDescriptor: [RKResponseDescriptor responseDescriptorWithMapping:responseObjMapping
+                                                                                  pathPattern:nil
+                                                                                      keyPath:nil
+                                                                                  statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+    
+    [objectManager postObject:contactinfo  path:@"SaveContact"
+                   parameters:@{@"FullName":contactinfo.FullName,
+                                @"Major":contactinfo.Major,
+                                @"EmailAddress":contactinfo.EmailAddress,
+                                @"School":contactinfo.School,
+                                @"PhoneNumber":contactinfo.PhoneNumber,
+                                @"About":contactinfo.About,
+                                @"Interests":contactinfo.Interests,
+                                @"PreferredContactMethod":contactinfo.PreferredContactMethod,
+                                @"RequesterID":contactinfo.RequesterID,
+                                @"LastUpdated":contactinfo.LastUpdated}
+                      success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
+                          ContactInfoResponse *response = mappingResult.firstObject;
+                          if ([response.result isEqualToString:@"success"]) {
+                              
+                          
+                          
+                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thank You!"
+                                                                          message:@"Your information is submitted."
+                                                                         delegate:nil
+                                                                cancelButtonTitle:@"OK"
+                                                                otherButtonTitles:nil];
+                              [alert show];
+                           
+                           }
+                        
+                          
+                      }
+                      failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error getting into"
+                                                                          message:[error localizedDescription]
+                                                                         delegate:nil
+                                                                cancelButtonTitle:@"OK"
+                                                                otherButtonTitles:nil];
+                          [alert show];
+                          NSLog(@"Hit error: %@", error);
+                      }
+     ];
+    CFRelease(uuidRef);
 }
 @end
